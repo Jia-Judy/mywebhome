@@ -1,0 +1,728 @@
+<!doctype html>
+
+<html lang="en">
+    
+  <head>
+    
+        <meta charset="utf-8">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge">  
+      
+       
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      
+        <link rel="stylesheet" href="lightbox.min.css">
+      
+        <script type="text/javascript" src="lightbox-plus-jquery.min.js"></script>
+
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+       
+        
+        <title>Jia's Pictures</title>
+      
+        <style type="text/css">
+      
+             body {
+                
+                position:relative;
+                margin:0;
+                padding:0;
+                
+            }
+            
+            .navbar {
+                
+                opacity:0.7;
+                height:60px;
+            }
+            
+            #logo {
+                
+                width:50px;
+                border-radius:4%;
+                padding-right:5px;
+            }
+            
+            .jumbotron {
+                
+                background-image: url(Jia-Pictures/breakfast.jpg);
+                background-position: 0% 50%;
+                background-size:cover;
+                background-repeat:no-repeat;
+                height:780px;
+                margin-top:50px;
+                width:100%;
+             }
+            
+            
+            .w-100 {
+                
+                height: 100vh;
+                
+            }
+            
+            #carouselExampleControls {
+                
+                margin-bottom:24px;
+                
+            }
+            
+            #carousel {
+                
+                width:100%;
+                text-align: center;
+                
+            }
+            
+            .fixed {
+                
+                position:fixed;
+                top:0;
+                left:0;
+                margin:0;
+                width:100%;
+                height: 100px;
+                padding-top:24px;
+                z-index: 1;
+                opacity:1;
+                background-color:white;
+                
+            }
+            
+            .content-top {
+                
+                padding-top:55px;
+                
+            }
+            
+            .badge {
+                
+                width:140px;
+                height: 50px;
+                padding-top:20px;
+                opacity:0.7;
+                color:white;
+            }
+            
+            #badge-background-road {
+                
+                background-image: url(Jia-Pictures/jia-road-label.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+                
+            }
+            
+            #badge-background-city {
+                
+                background-image: url(Jia-Pictures/jia-city-label.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+                
+            }
+            
+            #badge-background-illumination {
+                
+                background-image: url(Jia-Pictures/jia-illumination-label.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+               
+            }
+            
+            #badge-background-girls {
+                
+                background-image: url(Jia-Pictures/jia-girls-label-2.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+               
+            }
+            
+            #badge-background-animal {
+                
+                background-image: url(Jia-Pictures/jia-animal-label.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+               
+            }
+            
+            #badge-background-sunrise {
+                
+                background-image: url(Jia-Pictures/jia-sunrise-label.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+               
+            }
+            
+            #badge-background-buildings {
+                
+                background-image: url(Jia-Pictures/jia-buildings-label-1.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+               
+            }
+            
+            #badge-background-train {
+                
+                background-image: url(Jia-Pictures/jia-train-label.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+               
+            }
+            
+            #badge-background-plants {
+                
+                background-image: url(Jia-Pictures/jia-plants-label.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+               
+            }
+            
+            .card-columns {
+                
+                margin:24px 60px;
+                
+            }
+            
+            
+            #footer0 {
+                
+                width:100%;
+                margin-top:0px;
+                margin-bottom:0px;
+                background-color:#EBF5FB;
+                height:500px;
+                text-align: center;
+                vertical-align: middle;
+               
+            }
+            
+            #endfooterbox {
+                
+                display:table;
+                margin:0 auto;
+                
+            }
+            
+            #footertext {
+                
+                font-size:40px;
+                padding-top: 50px;
+                padding-bottom: 40px;
+                width:100%;
+                text-align: center;
+                
+            }
+            
+            #icons {
+                
+                display: table;
+                margin:0 auto;
+                padding-top:10px;
+                padding-bottom:10px;
+            }
+            
+           .icon {
+                
+                width:58px;
+                height:58px;
+                border:1px solid black;
+                border-radius: 50%;
+                background-color:white;
+                transition: background 0.5s ease-in-out;
+                cursor:pointer;
+                float:left;
+                margin-left:10px;
+                margin-right:10px;
+                
+            }
+            
+            #footer1s {
+                
+                padding-top:10px;
+                padding-bottom: 10px;
+            }    
+            
+            #footer1s a {
+                
+                text-decoration:none;
+                color:black;
+                
+            }
+            
+            #footer1s a:hover {
+                
+               color:cornflowerblue;
+                
+            }
+            
+           .footer1 {
+                
+                font-size:20px;
+                width:33%;
+                float:left;
+                text-align: left;
+                padding-left:100px;
+                
+            }
+            
+            
+            #footertext a:hover .fa-facebook-f, #footertext a:hover .fa-twitter, #footertext a:hover .fa-weixin,  #footertext a:hover .fa-weibo, #footertext a:hover .fa-instagram {
+                
+                color:white;
+                
+            }
+            
+        
+            .icon:hover {
+                
+                background-color:black;
+                
+            }
+            
+            
+            .size {
+                
+                font-size: 25px;
+                align-content: center;
+                position:relative;
+                top:-8px;
+            }
+            
+            .image {max-width:100%;height:auto;}
+            @media (max-width:700px) {.hide-small {display:none!important};}
+            
+            @media (max-width:992px) and (min-width:701px) {.hide-medium {display:none!important}}
+            
+            @media (min-width:993px) {.hide-large {display:none!important}}
+            
+            
+        </style>
+  
+    </head>
+    
+    <body data-spy="scroll" data-target="#navbar">
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><span><img src="Jia-Pictures/jia-logo.png"  id="logo"></span>Jia Lei</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Daddy's Pictures <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Jia's Pictures</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Food</a>
+      </li>    
+      <li class="nav-item">
+        <a class="nav-link" href="#">Yoga</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Travel</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+        
+        
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  
+            <div class="carousel-inner">
+   
+                <div class="carousel-item active">
+      
+                    <img class="image" src="Jia-Pictures/jia-yanhu-jia-1.png" style="width:1450px;height:auto" alt="First slide">
+    
+                </div>
+    
+                <div class="carousel-item">
+      
+                    <img class="image" src="Jia-Pictures/hamburge-9-1.png" style="width:1450px;height:auto" alt="Second slide">
+    
+                </div>
+    
+                <div class="carousel-item">
+      
+                    <img class="image" src="Jia-Pictures/jia-wedding-2-1.png" style="width:1450px;height:auto" alt="Third slide">
+    
+                </div>
+  
+            </div>
+  
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    
+                <span class="sr-only">Previous</span>
+  
+            </a>
+  
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+   
+                <span class="sr-only">Next</span>
+  
+            </a>
+
+        </div>
+        
+        <div id="carousel" class="sticky hide-small">
+            
+            <a href="#" class="badge badge-secondary" id="badge-background-road">Road</a>
+            <a href="#" class="badge badge-secondary" id="badge-background-illumination">Illumination</a>
+            <a href="#" class="badge badge-danger" id="badge-background-girls">Girls</a>
+            <a href="#" class="badge badge-success" id="badge-background-animal">Animals</a>
+            <a href="#" class="badge badge-warning" id="badge-background-sunrise">Sunrise</a>
+            <a href="#" class="badge badge-info" id="badge-background-buildings">Buildings</a>
+            <a href="#" class="badge badge-light" id="badge-background-city">City</a>
+            <a href="#" class="badge badge-dark" id="badge-background-plants">Plants</a>
+            <a href="#" class="badge badge-light" id="badge-background-train">Trains</a>
+
+        </div>
+        
+        <div class="cardscontainer">
+            
+            <div class="card-columns">
+
+
+                <div class="card">
+
+                    <a href="Jia-Pictures/hengshan-birds.jpeg" data-lightbox="mygallery"><img class="card-img-top" src="Jia-Pictures/hengshan's%20street%20light.jpeg" alt="Card image cap"></a>
+
+                </div>
+
+                <div class="card">
+
+                    <a href="Jia-Pictures/hengshan-park-shadow.jpeg" data-lightbox="mygallery"><img class="card-img-top" src="Jia-Pictures/hengshan-park-shadow.jpeg" alt="Card image cap"></a>
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/hengshan-park-temple.jpeg" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-wedding-2.png" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/hengshan-highway.jpeg" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-qinghai-road-2.png" alt="Card image cap">
+
+                </div>
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-hamburge-7.png" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-qinghai-road.png" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-manchester-christmas.png" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-hamburge-8.png" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/hamburge-9-1.png" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-hamburge-10.png" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-wedding-1.png" alt="Card image cap">
+
+                </div>
+
+                 <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/hengshan-park-b-2.jpeg" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/hometown-1.jpg" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-tangel-1.png" alt="Card image cap">
+
+                </div>
+
+                 <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-tangle-2.png" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/hometown-2.jpg" alt="Card image cap">
+
+                </div>
+
+                 <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-yanhu-jia-1.png" alt="Card image cap">
+
+                </div>
+
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-hamburge-2.png" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-hamburge-3.png" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-yanhu.png" alt="Card image cap">
+
+                </div>
+
+                 <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-qinghai-temple.png" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-hamburge-4.png" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/deadlion.jpg" alt="Card image cap">
+
+                </div>
+
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/coffee.jpg" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-hamburge-5.png" alt="Card image cap">
+
+                </div>
+
+                 <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/Jia.jpg" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-cat.png" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-dog.png" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-hamburge-6.png" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-heimahe-1.png" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/jia-qilianshan.png" alt="Card image cap">
+
+                </div>
+
+
+            </div>
+
+            <!--
+             <div id="footer0">
+
+                <div id="endfooterbox">
+
+                    <div id="footertext">
+
+                        <p>Follow Our World</p>
+
+                        <div id="icons">  
+
+                            <div class="icon">
+
+                                <a class="icon-link" target="_blank" href=""><i class="fab fa-facebook-f size"></i></a>        
+
+                            </div>
+
+                            <div class="icon">
+
+                                <a class="icon-link" target="_blank" href=""><i class="fab fa-twitter size"></i></a> 
+
+                            </div>
+
+                            <div class="icon">
+
+                                <a class="icon-link" target="_blank" href=""><i class="fab fa-instagram"></i></a> 
+
+                            </div>
+
+                            <div class="icon">
+
+                                <a class="icon-link" target="_blank" href=""><i class="fab fa-weixin"></i></a> 
+
+                            </div>
+                            <div class="icon">
+
+                                <a class="icon-link" target="_blank" href=""><i class="fab fa-weibo"></i></a> 
+
+                            </div> 
+
+                        </div>  
+
+                     </div>
+
+                     <div id="footer1s">
+
+                        <div class="footer1">
+
+                            <a target="_blank" href=""><p>Email: <br> judy20160101@outlook.com</p></a>
+
+                        </div>
+
+                        <div class="footer1">
+
+                            <a target="_blank" href=""><p>Phone: <br> 07376249937</p></a>
+
+                        </div>
+
+                        <div class="footer1">
+
+                            <a target="_blank" href=""><p>Address: <br> Manchester <br> United Kingdom</p></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+-->
+        </div>
+        
+        <script type="text/javascript">
+            
+            $(window).scroll(function(){
+  
+                var sticky = $('.sticky'),
+      
+                    scroll = $(window).scrollTop();
+                
+                if (scroll >= 862) sticky.addClass('fixed');
+  
+                else sticky.removeClass('fixed');
+
+            });
+            
+            $(window).scroll(function(){
+  
+                var content = $('.cardscontainer'),
+      
+                    scroll = $(window).scrollTop();
+                
+                if (scroll >= 862) content.addClass('content-top');
+  
+                else content.removeClass('content-top');
+
+            });
+        
+        </script>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+        
+    </body>
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

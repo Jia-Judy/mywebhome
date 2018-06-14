@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+        <title>Jia Lei</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inicail-scale=1.0" >
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        
+        <style>
+        
+            * {box-sizing:border-box}
+            
+            body {
+                
+                margin:0;
+                padding:0;
+                font-family:verdana, sans-serif;
+            }
+            
+            .top {
+                
+                position:relative;
+                width:100%;
+                z-index: 1;   
+            }
+            
+            .bar {
+                
+                width:100%;
+                padding:0px 0px;
+                margin:0;
+                float:left;
+                display:block;
+                position:fixed;
+                background-color:#FFFFFF;
+            }
+            
+            .bar-item {
+                
+                padding:8px 16px;
+                float:left;
+                display:inline-block;
+                text-align:left; 
+                vertical-align:middle;  
+            }
+            
+            .bar-block {
+                
+                width:100%;
+                padding:8px 16px;
+                display:block;
+                text-align:left;
+                float:left; 
+            }
+            
+            .link {
+                
+                text-decoration: none;
+                cursor:pointer;
+                color:inherit;
+                background-color:inherit;       
+            }  
+            
+            
+            
+            .show {display:block!important}
+            
+            .right {float:right!important;}
+            
+            .text-black,.hover-text-black:hover {color:#000}
+            .hover-grey:hover {color:#000!important;background-color:#f1f1f1!important;}
+            .black,.hover-black:hover {color:#fff;background-color:black;}
+            .text-white,.hover-text-white {color:#fff}
+            .light-grey,.hover-light-grey {color:black;background-color:#f1f1f1;}
+            .grey{color:#89827B}
+            
+            .active, .accordion:hover {color:#fff!important;background-color:black!important;}
+            
+            .hide {display:none;background-color:#ccc;}
+            
+           
+            .bgimg-1,.bgimg-2,.bgimg-3 {
+                
+                background-attachment: fixed;
+                background-size:cover;
+                background-repeat:no-repeat;
+                background-position:center;
+                
+            }
+            
+            .bgimg-1 {
+                
+                background-image:url(Jia-Pictures/jia-me-1.png);
+                min-height:100%;
+            }
+            
+            .bgimg-2 {
+                
+                background-image:url(Jia-Pictures/jia-hamburge-10.png);
+                min-height:400px;    
+            }
+            
+            .bgimg-3 {
+                
+                background-image:url(Jia-Pictures/jia-hamburge-9.png);
+                min-height:400px;    
+            }
+            
+            .header-container {
+                
+                position:relative;
+                height:800px;
+            }
+            
+            .portfolio-container {
+                
+                position:relative;
+                height:400px;
+            }
+            
+            .contact-image {
+                
+                position:relative;
+                height:400px;
+                
+            }
+            
+            .display-middle {
+                
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);   
+            }
+        
+            .button:hover{color:#000;background-color:#ccc;}
+            .button{border:none;display:inline-block;color:white;background-color:black;padding:8px 16px;cursor:pointer;text-decoration:none;}
+            
+            .border {border:1px solid black;border-radius: 4px}
+            
+            .bar:before,.bar:after,.container:before,.container:after {content:"";display:table;clear:both}
+            
+            .padding-large {padding:12px 24px}
+            .padding-64{padding-top:64px!important}
+            .padding-bottom-64{padding-bottom:64px;}
+            .padding-32{padding-top:32px;padding-bottom:32px}
+            .row-padding{padding:5px 6px}
+            .margin-right{margin-right:16px}
+            .margin-64{margin-top:64px}
+            .margin-50{margin-top:50px}
+            .margin-16{margin-top:16px;margin-bottom:16px}
+            .margin-bottom-16{margin-bottom:16px}
+            
+            .large{font-size:18px}
+            .xlarge{font-size:24px}
+            .xxlarge{font-size:30px}
+            .xxxlarge{font-size:36px}
+            
+            .letter-spacing{letter-spacing:4px}
+            
+            .opacity-min{opacity:0.75}
+            .opacity{opacity:0.85}
+            .hover-opacity-off:hover {opacity:1}
+            .hover-opacity:hover{opacity:0.7}
+            .animate-opacity{animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:0.85}}
+            
+            .center{text-align: center!important}
+            .dd{align-content: center}
+            
+            .container:before,.container:after,.row:before,.row:after,.col,.half{width:100%;float:left;}
+            .container {padding:0.01em 16px}
+            .content {max-width:980px;margin:auto;}
+            
+            .round{border-radius:4px}
+            .round-large{border-radius:8px}
+            .image{max-width:100%;height:auto;}
+            .clear{clear:both}
+            
+            .greyscale{filter:grayscale(30%)}
+            
+            .dropdown-content {display:none;position:absolute;padding-top:48px;width:700px;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);z-index: 1;}
+            
+            .dropdown-content a {display:block}
+            .dropdown-content a:hover {background-color:#FFFFFF}
+            
+             .dropdown:hover .dropdown-content {display:block;} 
+                
+            .transition {transition:background 0.45s ease-in-out}
+            
+            .input{padding:8px;display:block;border:1px solid #ccc;width:100%;}
+            
+            .modal {z-index:3;display:none;position:fixed;left:0px;top:0;max-width:100%;height:100%;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.8)}
+            .display-topright{position:absolute;right:0;top:0}  
+            .animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+            .transparent,.hover-none:hover{background-color:transparent!important}
+            
+            .modal-content {width:800px}
+            
+            /*
+            
+            @media (max-width:700px) {.modal-content{width:380px};}
+            @media (max-width:992px) and (min-width:701px) {.modal-content{width:580px};}
+            @media (min-width:993px) {.modal-content{width:800px};
+            
+            */
+            
+            @media (max-width:700px) {.hide-small {display:none!important};}
+            
+            @media (max-width:992px) and (min-width:701px) {.hide-medium {display:none!important}}
+            
+            @media (min-width:993px) {.hide-large {display:none!important}}
+            
+            
+            
+            @media (max-width:600px) {.modal-content{width:auto; margin-top:64px};}
+            
+            @media (max-width:768px) {.modal-content{width:500px}}
+            
+            @media (min-width:993px) {.modal-content{width:900px};}
+            
+            
+            @media (min-width:601px) {.m6 {width:49.99999%}.m3{width:24.9999%}.m4{width:33.3333%}.m8{width:66.6666%}.half{width:49.9999%}}
+            
+            /* Turn off parallax scrolling for tablets and mobile */
+            @media only screen and (max-device-width:1024px){
+                
+                .bgimg-1,bgimg-2,bgimg-3 {
+                    
+                    background-attachment: scroll;
+                }
+               
+                
+                
+        </style>
+        
+    </head>
+    
+    <body>
+    
+<!--Navbar (sit on top)-->
+        <div class="top">
+           
+            <div id="myNavbar" class="bar">
+             
+               
+                <a href="index.html" class="bar-item link">HOME</a>
+                <a href="Dads_Pictures.html"  class="bar-item link hide-small">DAD <i class="fa fa-camera"></i></a>
+                <a href="Jias_Pictures.html" class="bar-item link hide-small">JIA <i class="fa fa-caret-down"></i></a>
+                <a href="" class="bar-item link hide-small">FRIENDS <i class="fa fa-caret-down"></i></a>
+                <a href="" class="bar-item link hide-small right hover-grey"><i class="fa fa-search"></i></a>
+                
+<!--Navbar on small screens: How to show the dropdown-content? has to put to the dropdown-icon in the div where the dropdown-content is, then sent the whole div:hovor {display:block} -->
+                
+                <div class="dropdown"> 
+                    <i class="fa fa-bars hide-medium hide-large right link bar-item"></i>
+                    <div id="hidden-menu" class="hide-large hide-medium dropdown-content">    
+                        <a href="Jias_Pictures.html" class="bar-block link">JIA</a>
+                        <a href="Dads_Pictures.html" class="bar-block link">DAD</a>
+                        <a href="" class="bar-block link">FRIENDS</a>
+                        <a href="" class="bar-block link">SEARCH</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    
+        
+<!--First parallax image with logo text-->
+        <div class="header-container bgimg-1 opacity-min display-container" id="home">
+            <div id="logo" class="display-middle ">
+                <span class="padding-large border black xlarge letter-spacing animate-opacity opacity-min center">Welcome<span class="hide-small"> To Jia's Web </span></span>
+             </div>     
+        </div>
+          
+<!--About Section-->
+        <div id="about" class="content container padding-64 grey">
+            <h3 class="center">ABOUT ME</h3>
+            <p class="center">I love my life</p>
+            <p>Welcome to my website. I am Jia Lei. My english name is Judy. I am a Junior Front End Web Developer based in Manchester. I have passion for web developlment. Practising Yoga and taking pictures are my hobbies. Here you can find nice websites designed by myself and beautiful pictures from my Dad and me. Besides, you can also have a look of my friends'website.</p>
+            
+            <div class="row">
+                <div class="col m6 center padding-large"> 
+                    <p class="margin-right">My Profile</p>
+                    <img src="Jia-Pictures/jiaProfile.jpg" class="round image opacity hover-opacity-off" alt="Photo of Me" width="150" height="60">
+                </div>
+                
+                <div class="col m6 hide-small padding-large">
+                    <p>I'd like to use pictures to remember lovely moments of my daily life.I'd like to use pictures to remember lovely moments of my daily life.I'd like to use pictures to remember lovely moments of my daily life.I'd like to use pictures to remember lovely moments of my daily life.I'd like to use pictures to remember lovely moments of my daily life.I'd like to use pictures to remember lovely moments of my daily life. </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="clear"></div>
+        
+<!--Second parallax image with Portfolio text-->
+        <div class="bgimg-2 portfolio-container opacity-min display-container margin-64">
+        
+            <div class="display-middle">
+            
+                <span class="xxlarge text-white letter-spacing">Portfolio</span>
+                
+            </div>
+        
+        </div>
+        
+        
+<!--Container (Portfolio Section) -->
+        <div class="content padding-64 grey" id="portfolio">
+        
+            <h3 class="center xlarge">MY WORK</h3>
+            <p class="center"><em>Here are some of my latest designed websites. <br>Click on the images to the website</em></p><br>
+            
+            
+            <div class="center">
+            
+                <div class="col m4 row-padding">
+                    <img src="Jia-Pictures/jiacafe.png" alt="" width="100%" class="hover-opacity">
+                </div>
+                
+                <div class="col m4 row-padding">
+                    <img src="Jia-Pictures/photographer%20jia.png" alt="" width="100%" class="hover-opacity">
+                </div>
+                
+                <div class="col m4 row-padding">
+                    <img src="Jia-Pictures/hostel-website02.png" alt="" width="100%" class="hover-opacity">
+                </div>
+                
+            </div>
+            <div class="clear"></div>
+            <div class="center">
+                
+                <div class="col m4 row-padding">
+                    <img src="Jia-Pictures/breathmachine.png" alt="" width="100%" class="hover-opacity">
+                </div>
+                
+                <div class="col m4 row-padding">
+                    <img src="Jia-Pictures/hostel-website01.png" alt="" width="100%" class="hover-opacity">
+                </div>
+                
+                <div class="col m4 row-padding">
+                    <img src="Jia-Pictures/yoga.png" alt="" width="100%" class="hover-opacity">
+                </div>
+                
+            </div>
+            <div class="clear"></div>
+            <p class="center" style="padding-top:24px"><em>Here are some of my latest photographs. <br>Click on the images to make them bigger</em></p><br>
+            
+            <!-- Responsive Grid. four columns on laptops, tablets and desktops. Will stack on mobile devices/small screens (width:100%) -->
+            <div class="center">
+            
+                <div class="col m3 row-padding">
+                    <img src="Jia-Pictures/jia-hamburg-11.png" alt="" width="100%" class="hover-opacity" onclick="onClick(this)">
+                </div>
+                
+                <div class="col m3 row-padding">
+                    <img src="Jia-Pictures/jia-hamburge-2.png" alt="" width="100%" class="hover-opacity" onclick="onClick(this)">
+                </div>
+                
+                <div class="col m3 row-padding">
+                    <img src="Jia-Pictures/jia-hamburge-4.png" alt="" width="100%" class="hover-opacity" onclick="onClick(this)">
+                </div>
+                
+                <div class="col m3 row-padding">
+                    <img src="Jia-Pictures/jia-hamburge-5.png" alt="" width="100%" class="hover-opacity" onclick="onClick(this)">
+                </div>
+                
+                <div class="col m3 row-padding">
+                    <img src="Jia-Pictures/jia-yanhu-jia.jpeg" alt="" width="100%" class="hover-opacity" onclick="onClick(this)">
+                </div>
+                
+                <div class="col m3 row-padding">
+                    <img src="Jia-Pictures/jia-hamburge.jpeg" alt="" width="100%" class="hover-opacity" onclick="onClick(this)">
+                </div>
+                
+                <div class="col m3 row-padding">
+                    <img src="Jia-Pictures/jia-tangel-1.jpeg" alt="" width="100%" class="hover-opacity" onclick="onClick(this)">
+                </div>
+                
+                <div class="col m3 row-padding">
+                    <img src="Jia-Pictures/jia-heimahe-3.jpeg" alt="" width="100%" class="hover-opacity" onclick="onClick(this)">
+                </div>
+                
+            </div>
+            
+            <div class="clear"></div>
+            
+            <div class="center">
+                <a href="Jias_Pictures.html"><button class="button padding-large margin-64 transition round">LOAD MORE</button></a>
+            </div>
+            
+        </div>
+        
+<!-- full size images on click -->
+        <div class="clear"></div>
+        
+        <div id="modal01" class="modal" onclick="this.style.display='none'">
+        
+            <span class="button large black display-topright"><i class="fa fa-remove"></i></span>
+            
+            <div class="modal-content animate-zoom center transparent margin-64">
+            
+                <img id="img-1" class="image">
+                <p id="caption" class="opacity large"></p>
+                
+            </div>
+            
+        </div>
+        
+<!--Third parallax image with Contact text-->
+        
+        <div class="bgimg-3 contact-image opacity-min margin-64">
+        
+            <div class="display-middle ">
+            
+                <span class="xxlarge text-white letter-spacing">CONTACT</span>
+                
+            </div>
+        
+        </div>
+        
+        
+<!--Container (Contact Section) -->
+        
+        <div class="content padding-64 grey"id="contact">
+            
+            <h3 class="center xlarge">WHERE I WORK</h3>
+            <p class="center"><em>I'd love your feedback</em></p>
+                
+            <div class="row padding-32 margin-16">
+                
+<!--Add Google Map-->
+                <div class="col m4"> 
+                    <div id="googleMap" class="round-large greyscale" style="width:100%;height:300px"></div>
+                </div>
+                
+                <div class="col m8 container margin-50">
+                
+                    <div class="large margin-bottom-16">
+                    
+                        <i class="fa fa-map-marker fa-fw grey hover-text-black xlarge margin-right"></i>  Manchester, UK <br>
+                        <i class="fa fa-phone fa-fw hover-text-black xlarge margin-right"></i> Phone:07376249937<br>
+                        <i class="fa fa-envelope fa-fw hover-text-black xlarge margin-right"></i> Email:judy20160101@outlook.com<br>
+                        
+                    </div>
+                    
+                    <form action="/action_page.php" target="_blank">
+                    
+                        <div>
+                        
+                            <div class="half row-padding">
+                                <input class="input" type="text" placeholder="Name" required name="Name">
+                            </div>
+                            <div class="half row-padding">
+                                <input class="input" type="text" placeholder="Email" required name="Email">
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="row-padding">
+                            <input class="input" type="text" placeholder="Message" required name="Message">
+                        </div>
+                        
+                        <div class="row-padding" style="float:right">
+                            <button class="button transition round"><i class="fa fa-paper-plane"></i> Send Message</button>
+                        </div>                    
+                    </form>
+                    
+                </div>
+            </div>               
+        </div>
+    <!--Footer-->
+    <div class="clear"></div>    
+        
+    <footer class="center black padding-64 padding-bottom-64 opacity hover-opacity-off margin-50">
+        
+        <a href="#home" class="button round transition"><i class="fa fa-arrow-up"></i> To the top</a>    
+        
+        <div class="xlarge margin-16">
+            
+            <i class="fa fa-facebook-official hover-opacity"></i>
+            <i class="fa fa-instagram hover-opacity"></i>
+            <i class="fa fa-snapchat hover-opacity"></i>
+            <i class="fa fa-pinterest-p hover-opacity"></i>
+            <i class="fa fa-twitter hover-opacity"></i>
+            <i class="fa fa-linkedin hover-opacity"></i>
+            
+        </div>
+        
+        <p>Powerd by Jia</p>
+        
+    </footer>
+        
+        
+         
+        <script type="text/javascript"> 
+
+            
+            function myMap() {
+                var myCenter = new google.maps.LatLng(53.4363, -2);
+                var mapCanvas = document.getElementById("googleMap");
+                var mapOptions = {center: myCenter, zoom: 5};
+                var map = new google.maps.Map(mapCanvas, mapOptions);
+                var marker = new google.maps.Marker({position:myCenter});
+                    marker.setMap(map);
+                    }
+
+            // FullSize Image Gallery
+            function onClick(element) {
+              document.getElementById("img-1").src = element.src;
+              document.getElementById("modal01").style.display = "block";
+              
+              var captionText = document.getElementById("caption");
+              captionText.innerHTML = element.alt;
+            }
+            
+            
+            /*
+            function dropdownMenu(){
+                
+                dropdown-content.style.display = "block"; // why it dosen't work?
+                
+            }
+            
+            */ 
+            
+            /*
+            $(function() {
+                $( "#accordion" ).accordion({
+                    collapsible: true
+                }); 
+            });
+            
+            
+            
+            
+            function toggleFunction() {
+                var x = document.getElementById("hidden-menu");
+                if (x.className.indexOf("show") == -1) {
+                    x.className += " show";
+                } else {
+                    x.className = x.className.replace("show", "");
+                }
+            }
+            
+            <button onclick="MyFunction()" style="position: absolute; left:100px; z-index:10">Click me</button>
+            function MyFunction() {
+                                
+                var HiddenMenu = document.getElementById('hidden-menu');
+                
+                if (HiddenMenu.style.display == 'block')
+                    HiddenMenu.style.display = 'none';
+                else
+                    HiddenMenu.style.display = 'block'; */
+                
+                
+            
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-oVVXWTgjpaTyPrOWDh32VnOqGXQUhE8&callback=myMap"></script>
+        <!--
+        To use this code on your website, get a free API key from Google.
+        Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+        -->
+        
+    </body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

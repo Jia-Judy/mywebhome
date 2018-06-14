@@ -1,0 +1,533 @@
+
+<!doctype html>
+
+<html lang="en">
+    
+  <head>
+    
+        <meta charset="utf-8">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge">  
+      
+       
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      
+        <link rel="stylesheet" href="lightbox.min.css">
+      
+        <script type="text/javascript" src="lightbox-plus-jquery.min.js"></script>
+
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+       
+        
+        <title>Oldman</title>
+      
+        <style type="text/css">
+      
+             body {
+                
+                position:relative;
+                margin:0;
+                padding:0;
+                
+            }
+            
+            #logo {
+                
+                width:50px;
+                border-radius:4%;
+                padding-right:5px;
+            }
+            
+            .navbar {
+                
+                opacity:0.7;
+                height:60px;
+            }
+            
+            .jumbotron {
+                
+                background-image: url(Jia-Pictures/breakfast.jpg);
+                background-position: 0% 50%;
+                background-size:cover;
+                background-repeat:no-repeat;
+                height:780px;
+                margin-top:50px;
+                width:100%;
+             }
+            
+            .clear {
+                
+                clear:both;
+                
+            }
+            
+            .w-100 {
+                
+                height: 100vh;
+                
+            }
+            
+            #carouselExampleControls {
+                
+                margin-bottom:24px;
+                
+            }
+            
+            #carousel {
+                
+                width:100%;
+                text-align: center;
+                
+            }
+            
+            .fixed {
+                
+                position:fixed;
+                top:0;
+                left:0;
+                margin:0;
+                width:100%;
+                height: 150px;
+                padding-top:80px;
+                z-index: 1;
+                opacity:1;
+                background-color:white;
+                
+            }
+            
+            .badge {
+                
+                width:140px;
+                height: 50px;
+                padding-top:20px;
+                opacity:0.7;
+                color:white;
+            }
+            
+           #badge-background-nature {
+                
+                background-image: url(Jia-Pictures/dad-yanchuan-label.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+                opacity:0.7;
+                
+            }
+            
+            #badge-background-oldman {
+                
+                background-image: url(Jia-Pictures/dad-oldman-label.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+                opacity:0.7;
+            }
+            
+            #badge-background-sunset {
+                
+                background-image: url(Jia-Pictures/dad-sunset-label.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+                opacity:0.7;
+            }
+            
+            #badge-background-europe {
+                
+                background-image: url(Jia-Pictures/dad-europe-label.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+                opacity:0.7;
+            }
+            
+            #badge-background-YangGe {
+                
+                background-image: url(Jia-Pictures/dad-YangGe-label.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+                opacity:0.7;
+            }
+            
+            #badge-background-tibet {
+                
+                background-image: url(Jia-Pictures/dad-tibet-label.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+                opacity:0.7;
+            }
+            
+            #badge-background-mountain {
+                
+                background-image: url(Jia-Pictures/dad-mountain-label.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+                opacity:0.7;
+            }
+            
+            #badge-background-bridge {
+                
+                background-image: url(Jia-Pictures/dad-bridge-label.png);
+                background-size:cover;
+                background-repeat: no-repeat;
+                opacity:0.7;
+            }
+            
+            #badge-background-zhangye {
+                
+                background-image: url(Jia-Pictures/dad-zhangye-label.jpg);
+                background-size:cover;
+                background-repeat: no-repeat;
+                opacity:0.7;
+            }
+            
+            #introduction {
+                
+                width:100%;
+                height:300px;
+                color:black;
+                
+            }
+     
+            .card-columns {
+                
+                margin:200px 60px;
+                
+            }
+            
+            
+            #footer0 {
+                
+                width:100%;
+                margin-top:0px;
+                margin-bottom:0px;
+                background-color:#EBF5FB;
+                height:500px;
+                text-align: center;
+                vertical-align: middle;
+               
+            }
+            
+            #endfooterbox {
+                
+                display:table;
+                margin:0 auto;
+                
+            }
+            
+            #footertext {
+                
+                font-size:40px;
+                padding-top: 50px;
+                padding-bottom: 40px;
+                width:100%;
+                text-align: center;
+                
+            }
+            
+            #icons {
+                
+                display: table;
+                margin:0 auto;
+                padding-top:10px;
+                padding-bottom:10px;
+            }
+            
+           .icon {
+                
+                width:58px;
+                height:58px;
+                border:1px solid black;
+                border-radius: 50%;
+                background-color:white;
+                transition: background 0.5s ease-in-out;
+                cursor:pointer;
+                float:left;
+                margin-left:10px;
+                margin-right:10px;
+                
+            }
+            
+            #footer1s {
+                
+                padding-top:10px;
+                padding-bottom: 10px;
+            }    
+            
+            #footer1s a {
+                
+                text-decoration:none;
+                color:black;
+                
+            }
+            
+            #footer1s a:hover {
+                
+               color:cornflowerblue;
+                
+            }
+            
+           .footer1 {
+                
+                font-size:20px;
+                width:33%;
+                float:left;
+                text-align: left;
+                padding-left:100px;
+                
+            }
+            
+            
+            #footertext a:hover .fa-facebook-f, #footertext a:hover .fa-twitter, #footertext a:hover .fa-weixin,  #footertext a:hover .fa-weibo, #footertext a:hover .fa-instagram {
+                
+                color:white;
+                
+            }
+            
+        
+            .icon:hover {
+                
+                background-color:black;
+                
+            }
+            
+            
+            .size {
+                
+                font-size: 25px;
+                align-content: center;
+                position:relative;
+                top:-8px;
+            }
+            
+            
+            
+        </style>
+  
+    </head>
+    
+    <body data-spy="scroll" data-target="#navbar">
+        
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><span><img src="Jia-Pictures/jia-logo.png"  id="logo"></span>Jia Lei</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Daddy's Pictures <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Jia's Pictures</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Food</a>
+      </li>    
+      <li class="nav-item">
+        <a class="nav-link" href="#">Yoga</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Travel</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+        
+
+        
+        <div id="carousel" class="fixed">
+            
+            <a href="#" class="badge badge-secondary" id="badge-background-nature">Lake</a>
+            <a href="#" class="badge badge-secondary" id="badge-background-oldman">Oldman</a>
+            <a href="#" class="badge badge-success" id="badge-background-sunset">Sunset</a>
+            <a href="#" class="badge badge-danger" id="badge-background-europe">Europe</a>
+            <a href="#" class="badge badge-warning" id="badge-background-YangGe">YangGe</a>
+            <a href="#" class="badge badge-info" id="badge-background-tibet">Tibet</a>
+            <a href="#" class="badge badge-light" id="badge-background-mountain">Mountain</a>
+            <a href="#" class="badge badge-dark" id="badge-background-bridge">Bridge</a>
+            <a href="#" class="badge badge-light" id="badge-background-zhangye">ZhangYe</a>
+
+        </div>
+        
+        <div class="clear"></div>
+            
+        <div id="cardscontainer">
+        
+            <div class="card-columns">
+            
+                <div class="card">
+
+                    <img class="card-img-top oldman" src="Jia-Pictures/dad-oldman-1.jpg" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top oldman" src="Jia-Pictures/dad-oldman-3.jpg" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top oldman" src="Jia-Pictures/dad-oldman.jpg" alt="Card image cap">
+
+                </div>
+
+                     <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/dad-yangge-1.png" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/dad-yangge-2.png" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/dad-yangge-3.png" alt="Card image cap">
+
+                </div>
+
+               <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/dad-yangge-5.png" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top oldman" src="Jia-Pictures/dad-oldman-4.jpg" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/dad-oldman-5.jpg" alt="Card image cap">
+
+                </div>
+
+                <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/dad-oldman-6.jpg" alt="Card image cap">
+
+                </div>
+
+               <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/dad-oldman-7.jpg" alt="Card image cap">
+
+                </div>
+
+               <div class="card">
+
+                    <img class="card-img-top" src="Jia-Pictures/dad-oldman-8.jpg" alt="Card image cap">
+
+                </div>
+
+            </div>
+
+             <div id="footer0">
+
+                <div id="endfooterbox">
+
+                    <div id="footertext">
+
+                        <p>Follow Our World</p>
+
+                        <div id="icons">  
+
+                            <div class="icon">
+
+                                <a class="icon-link" target="_blank" href=""><i class="fab fa-facebook-f size"></i></a>        
+
+                            </div>
+
+                            <div class="icon">
+
+                                <a class="icon-link" target="_blank" href=""><i class="fab fa-twitter size"></i></a> 
+
+                            </div>
+
+                            <div class="icon">
+
+                                <a class="icon-link" target="_blank" href=""><i class="fab fa-instagram"></i></a> 
+
+                            </div>
+
+                            <div class="icon">
+
+                                <a class="icon-link" target="_blank" href=""><i class="fab fa-weixin"></i></a> 
+
+                            </div>
+                            <div class="icon">
+
+                                <a class="icon-link" target="_blank" href=""><i class="fab fa-weibo"></i></a> 
+
+                            </div> 
+
+                        </div>  
+
+                     </div>
+
+                     <div id="footer1s">
+
+                        <div class="footer1">
+
+                            <a target="_blank" href=""><p>Email: <br> judy20160101@outlook.com</p></a>
+
+                        </div>
+
+                        <div class="footer1">
+
+                            <a target="_blank" href=""><p>Phone: <br> 07376249937</p></a>
+
+                        </div>
+
+                        <div class="footer1">
+
+                            <a target="_blank" href=""><p>Address: <br> Manchester <br> United Kingdom</p></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+        
+    </body>
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
